@@ -1,0 +1,33 @@
+<app-slide [nombre]="'Este es el Test Fullstack'"></app-slide>
+
+<div class="center">
+    <section id="content">
+
+        <h1 class="subheader">Test</h1>
+        <p>pagina works!</p>
+        <p>Intenta agregar tu apellido!</p>
+
+        <div *ngIf="nombre && apellidos; then siHayParametros else noHayParametros">
+
+        </div>
+
+        <ng-template #siHayParametros>
+            <h2>Tu magico nombre es: {{nombre}} </h2>
+            <h2>Y tu apellido : {{apellidos}} </h2>
+
+        </ng-template>
+
+        <ng-template #noHayParametros>
+            <h2>No hay datos que mostrar :C </h2>
+            <h2>No rompas mi app :c </h2>
+
+        </ng-template>
+
+
+        <button (click)="redireccion()">Ponme Nombre y Apellido</button>
+
+    </section>
+
+    <app-sidebar> </app-sidebar>
+
+</div>

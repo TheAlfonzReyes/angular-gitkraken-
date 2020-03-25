@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Framework Angular</title>
+    <!--Hoja de Estilos
+                El meta viewport es SUPER IMPORTANTE
+                para poder hacer responsive la web 
+                y escale bien en todos los dispositivos.
+        -->
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+
+    <!--
+          <script type="text/javascript">
+            window.addEventListener("load", function(){
+                var template = document.getElementById("article-template");
+                var articles = document.getElementById("articles");
+                for (var i=0; i <= 5; i++ ){
+                articles.appendChild(clonado)
+                 var clonado = template.cloneNode(true);
+           }
+            });  
+        </script>
+      -->
+</head>
+
+<body>
+    <!--<h1>Bienvenido al Master</h1>-->
+    <header id="header">
+        <div class="center">
+            <!-- Logo-->
+            <div id="logo">
+                <img src="assets/images/angular.svg" class="app-logo" alt="Logotipo" />
+                <span id="brand">
+                    <strong>Curso </strong>Angular
+                </span>
+            </div>
+            <!-- Menu-->
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <a href="formulario.html">Formulario</a>
+                    </li>
+                    <li>
+                        <a href="#">Pagina 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Pagina 2</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--Limpiar los Floats-->
+            <div class="clearfix"></div>
+        </div>
+    </header>
+
+    <div id="slider" class="slider-big">
+        <h1>Utilizando el framework para javascript Angular</h1>
+        <a href="#" class="btn-white">Ir al blog</a>
+    </div>
+
+    <div class="center">
+        <section id="content">
+            <h2 class="subheader">Ultimos articulos</h2>
+
+
+            <script type="text/javascript">
+                window.addEventListener("load", function () {
+                    var template = document.getElementById("article-template");
+
+
+                    var articles = document.getElementById("articles");
+                    for (var i = 1; i <= 3; i++) {
+                        var clonado = template.cloneNode(true);
+                        clonado.removeAttribute("id");
+                        var h2 = clonado.getElementsByTagName("h2")[0];
+                        h2.innerHTML = h2.textContent + ' ' + i;
+
+                        articles.appendChild(clonado);
+                    }
+
+
+                });
+
+            </script>
+
+
+
+            <!--Listado de Articulos-->
+            <div id="articles">
+                <article class="article-item" id="article-template">
+                    <div class="image-wrap">
+                        <img src="https://i.udemycdn.com/course/750x422/2365628_0b60_7.jpg " alt="Angular" />
+                    </div>
+
+                    <h2>Articulo de Prueba</h2>
+                    <span class="date">
+                        Hace 5 minutos
+                    </span>
+                    <a href="article.html">Leer mas</a>
+                    <div class="clearfix"></div>
+
+                </article>
+
+                <!--AÑADIR ARTICULOS VIA JS-->
+
+            </div>
+
+
+    </div>
+
+    </section>
+
+    <aside id="sidebar">
+        <div id="nav-blog" class="sidebar-item">
+            <h3>Puedes hacer esto</h3>
+            <a href="#" class="btn btn-success">Crear Articulo</a>
+        </div>
+
+        <div id="search" class="sidebar-item">
+            <h3>Buscador</h3>
+            <p>Encuentra el articulo que buscas</p>
+            <form>
+                <input type="text" name="search" />
+                <input type="submit" name="submit" value="Buscar" class="btn" />
+            </form>
+        </div>
+
+
+    </aside>
+
+    <div class="clearfix"></div>
+
+    </div>
+
+    <footer id="footer">
+        <div class="center">
+            <p>
+                &copy; Alfonso Reyes Angular
+            </p>
+
+        </div>
+    </footer>
+</body>
+
+</html>
